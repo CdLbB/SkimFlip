@@ -23,11 +23,11 @@ The use is straightforward. The orientation of the document is rotated to match 
 - If you've changed pages recently, but now want to flip back to your last reading place, turn the notebook over with display/base facing down briefly (until you hear a tink) and the document will return to your previous spot.
 -  Turn the notebook over with display/base facing down for a count of of three (until you hear a submarine sound that follows the tink), you will see a dialog box:
 
-> Choosing the box's default option, "Pause SkimFlip", will suspend SkimFlip so that you can tip your Modbook as you wish without any document rotation or page turning. Flipping your Modbook over again for a count of three will reactivate SkimFlip.
+1. Choosing the box's default option, "Pause SkimFlip", will suspend SkimFlip so that you can tip your Modbook as you wish without any document rotation or page turning. Flipping your Modbook over again for a count of three will reactivate SkimFlip.
 
-> Choosing the "Turn Pages with Stylus" option, disables the ability to turn pages by tilting. I often put SkimFlip in this state when riding on the bus to prevent unwanted page changes. (One can still turn pages in Skim's Full Screen and Presentation Mode by putting the pen near the bottom of the display and using the interface that pops up). To re-enable page change by tilting, flip your Modbook upside down again for a count of three.
+2. Choosing the "Turn Pages with Stylus" option, disables the ability to turn pages by tilting. I often put SkimFlip in this state when riding on the bus to prevent unwanted page changes. (One can still turn pages in Skim's Full Screen and Presentation Mode by putting the pen near the bottom of the display and using the interface that pops up). To re-enable page change by tilting, flip your Modbook upside down again for a count of three.
 
-> The last option, "Send Escape key", just sends Skim an escape keystroke, which is useful for exiting Full Screen or Presentation Mode if a keyboard isn't handy. 
+3. The last option, "Send Escape key", just sends Skim an escape keystroke, which is useful for exiting Full Screen or Presentation Mode if a keyboard isn't handy. 
 
 That is all there is to it, but a couple caveats are in order. First, SkimFlip only works when Skim is the frontmost application. When you are using other apps, SkimFlip hibernates (this is also a quick way to pause SkimFlip). In addition, SkimFlip seems to work best when Skim's view settings are set to "Automatically Resize", but NOT set to "Continuous". 
 
