@@ -175,7 +175,7 @@ on idle
 		end tell
 		--set {notebookOrient, notebookTilt} to {getDocOrient(), 0}
 		set {notebookOrient, notebookTilt} to getNotebookOrient("3")
-		if notebookOrient ³ 0 then
+		if notebookOrient >= 0 then
 			set nowPage to getPage()
 			if (item 1 of nowPage) is not (item 1 of item 2 of lastPages) then
 				set lastPages to getRightDoc(nowPage, lastPages)
@@ -364,7 +364,7 @@ on idle
 								turnPage(notebookTilt)
 								-- Do something harmless to keep OS from going to Sleep
 								tell application "System Events" to key code 114 using shift down
-							else if tiltCount ² 12 then
+							else if tiltCount <= 12 then
 								set orientCheckDelay to 0.1 * orientCheckDelayP
 								turnPage(notebookTilt)
 								delay orientCheckDelayP * (1.4 - 0.11 * (tiltCount))
@@ -380,11 +380,11 @@ on idle
 								turnPage(notebookTilt / 2)
 								-- Do something harmless to keep OS from going to Sleep
 								tell application "System Events" to key code 114 using shift down
-							else if tiltCount ² 6 then
+							else if tiltCount <= 6 then
 								set orientCheckDelay to 0.15 * orientCheckDelayP
 								turnPage(notebookTilt / 2)
 								delay orientCheckDelayP * (1.2 - 0.2 * (tiltCount))
-							else if tiltCount ² 12 then
+							else if tiltCount <= 12 then
 								set orientCheckDelay to 0.1 * orientCheckDelayP
 								turnPage(notebookTilt / 2)
 							else
@@ -537,16 +537,16 @@ end getNotebookOrient
 --------------- Determine the tilt of the notebook ----------------
 ---------------------------------------------------------------------------
 on getTilt(theSine)
-	if theSine ² -sinHiTilt then
+	if theSine <= -sinHiTilt then
 		return 2
 	else
-		if theSine ² -sinIgnore then
+		if theSine <= -sinIgnore then
 			return 1
 		else
-			if theSine ³ sinHiTilt then
+			if theSine >= sinHiTilt then
 				return -2
 			else
-				if theSine ³ sinIgnore then
+				if theSine >= sinIgnore then
 					return -1
 				else
 					return 0
@@ -660,7 +660,7 @@ on turnPage(notebookTilt)
 		tell application "Skim"
 			tell document 1
 				set numPage to (index of current page)
-				if numPage + notebookTilt ³ 0 then
+				if numPage + notebookTilt >= 0 then
 					set current page to (page (numPage + notebookTilt))
 				end if
 			end tell
