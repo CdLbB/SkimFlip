@@ -76,7 +76,7 @@ on run
 	if typeComputer is "macbook" or typeComputer is "macbook as modbook" then
 		tell application "Skim"
 			activate
-			display alert "Your notebook appears to be a MacBook, not a Modbook." message "You have options for how SkimFlip will function:" & return & "    ** Modbook functionality - Rotate the document based on the orientation of the notebook's base." & return & "    ** MacBook functionality - Rotate the document based on the orientation of the notebook's screen," & return & "       which is assumed to be tilted up at an angle of 60¼." buttons {"This is a Modbook!", "MacBook functionality", "Modbook functionality"} default button 3 giving up after 100
+			display alert "Your notebook appears to be a MacBook, not a Modbook." message "You have options for how SkimFlip will function:" & return & "    ** Modbook functionality - Rotate the document based on the orientation of the notebook's base." & return & "    ** MacBook functionality - Rotate the document based on the orientation of the notebook's screen," & return & "       which is assumed to be tilted up at an angle of 60 degrees." buttons {"This is a Modbook!", "MacBook functionality", "Modbook functionality"} default button 3 giving up after 100
 			
 			if button returned of result is "MacBook functionality" then
 				set typeComputer to "macbook"
