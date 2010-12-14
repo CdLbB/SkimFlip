@@ -40,7 +40,7 @@ Finally, since SkimFlip needs to respond to small changes in Modbook orientation
 
 Credits and Licenses
 --------------------
-The MacFlip script was written by [Eric Nitardy][ericn] (©2010). It is also available for download from [Modbookish][] and may be modified and redistributed in accordance with the `License.txt` file.
+The SkimFlip script was written by [Eric Nitardy][ericn] (©2010). It is also available for download from [Modbookish][] and may be modified and redistributed in accordance with the `License.txt` file.
 
 The script uses the Unix utility smsutil and library smslib written by Daniel Griscom (©2007-2010). Please read the accompanying `smsutilCREDITS.txt` and `smsutilLICENSE.txt` file in the Resources folder for more information or visit his web site at [http://www.suitable.com][suitable] 
 
